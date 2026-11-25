@@ -12,4 +12,5 @@ unlimited trial is blocked) and ask it to generate the images. Reference photos 
 - [Olive Green](olive-green.md)
 - [Grey](grey.md)
 - [Packaging](packaging.md)
+- [RYUK / LUNA swap prompts](ryuk-luna-swap.md) (edit the worn photos: guys RYUK, girls LUNA, both)
 - [Exact hex colours](colours.md) (source of truth for every colour lock)

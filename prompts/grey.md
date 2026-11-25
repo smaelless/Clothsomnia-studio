@@ -14,10 +14,9 @@ Pass all four as `image_references` on every generation:
 
 ## Model and settings (best available on the unlimited trial)
 
-- **Images:** `gpt_image_2_6`, `quality: "max"`, `resolution: "4k"`, `use_unlim: true`.
-- **If the trial rejects max/4k:** step down one notch at a time (`xhigh`, then `high`; `4k`, then `2k`) and keep the
-  highest setting it accepts.
-- **Second opinion:** also run shot 1 on `nano_banana_pro` (`resolution: "4k"`, same four references as
+- **Images:** `gpt_image_2_6`, `quality: "medium"`, `resolution: "2k"`, `use_unlim: true`. This is the highest
+  setting the free trial covers (2k max, quality low/medium only); anything above it costs credits.
+- **Second opinion:** also run shot 1 on `nano_banana_pro` (`resolution: "2k"`, same four references as
   `image_references`, `use_unlim: true`) and keep whichever model matches the real hoodie best for the rest.
 - Check every result against the reference photos (colours, panel shapes, sherpa texture) and regenerate any image
   that changes the design.
@@ -39,11 +38,11 @@ Oversized solid cool slate-grey curly sherpa fleece pullover hoodie, dropped sho
 
 ## Videos (after the images are approved)
 
-Model: `seedance_2_5`, `mode: "omni_reference"`, `resolution: "4k"` (fallback `1080p`), `use_unlim: true`.
-Use the best generated studio image (shot 1) as `start_image` and the four reference photos as `image_references`.
-No people, no text.
+Model: `seedance_2_5`, `mode: "omni_reference"`, `resolution: "720p"` (the highest the free trial covers),
+`use_unlim: true`. Use the four reference photos as `image_references`. No people, no text.
+Video 7 uses the best studio image (shot 1) as `start_image`; video 8 uses the approved shot 4 image.
 
-7. **Hero turntable (1:1, 8s, no audio)**: The hoodie on an invisible mannequin slowly rotates 360° on the
+7. **Hero turntable (1:1, 8s, no audio, start_image = shot 1)**: The hoodie on an invisible mannequin slowly rotates 360° on the
    light warm grey studio set; the sherpa fleece catches the soft light; smooth, loopable.
-8. **Lifestyle motion (3:4, 10s, soft ambient audio)**: A slow cinematic dolly-in on the scene from shot 4,
+8. **Lifestyle motion (3:4, 10s, soft ambient audio, start_image = shot 4)**: A slow cinematic dolly-in on the scene from shot 4,
    with gentle natural movement in the light and air, ending on a close-up of the fleece texture.

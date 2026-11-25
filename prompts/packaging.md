@@ -17,9 +17,8 @@ For a shot that features a specific hoodie, you can also add that colour's front
 
 ## Model and settings (best available on the unlimited trial)
 
-- **Images:** `gpt_image_2_6`, `quality: "max"`, `resolution: "4k"`, `use_unlim: true`. GPT Image is the strongest
-  trial model for printed text, which matters here.
-- **If the trial rejects max/4k:** step down one notch at a time (`xhigh`, then `high`; `4k`, then `2k`).
+- **Images:** `gpt_image_2_6`, `quality: "medium"`, `resolution: "2k"`, `use_unlim: true` (the highest the free trial
+  covers). GPT Image is the strongest trial model for printed text, which matters here.
 - **Text check:** compare every letter on the packaging with the references and regenerate any image with a typo.
 
 ## Packaging description (include in every prompt)
@@ -54,7 +53,7 @@ Keep all printed text exactly as written above. No people, no other brand logos,
 
 ## Video (after the images are approved)
 
-Model: `seedance_2_5`, `mode: "omni_reference"`, `resolution: "4k"` (fallback `1080p`), `use_unlim: true`.
+Model: `seedance_2_5`, `mode: "omni_reference"`, `resolution: "720p"` (the highest the free trial covers), `use_unlim: true`.
 Use the best gift-box image (shot 1 or 2) as `start_image` and the four packaging references as `image_references`.
 
 5. **Unboxing (9:16, 10s, soft ambient audio)**: The lid of the white Clothsomnia gift box lifts off on its own

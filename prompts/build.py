@@ -67,7 +67,7 @@ COLOURS = {
             ("af4970ae-b9c0-40bb-9480-63f4b9ae0cac", "hood and neck label detail"),
             ("83e47eae-914b-48d6-8db1-1b480e2b9a9a", "grey/black seam and texture detail"),
         ],
-        "desc": "Oversized sherpa fleece pullover hoodie, cool slate grey centre panel in an inverted V (wide at "
+        "desc": "Oversized sherpa fleece pullover hoodie, cool slate grey (about #6D6C76 / RGB 109, 108, 118, the same grey as the solid Grey hoodie) centre panel in an inverted V (wide at "
                 "the shoulders, narrowing to a point at the hem) with wide black sherpa side panels; the black "
                 "panels continue down the sides of the back. Grey hood and sleeves, wide soft sherpa cuffs and "
                 "hem band in grey, same fine pile as the body, NOT ribbed knit, diagonal slit pockets as a subtle "

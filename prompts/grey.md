@@ -23,18 +23,19 @@ Pass all four as `image_references` on every generation:
 
 ## Product description (include in every prompt)
 
-Oversized solid cool slate-grey curly sherpa fleece pullover hoodie, dropped shoulders, grey hood, grey ribbed cuffs and hem band, kangaroo pocket. These references are on-model photos: copy only the hoodie, not the person. Reproduce the colour layout, proportions and curly sherpa texture exactly as in the references. No people, no mannequin visible, no other brand logos, no hang tags, no text overlays.
+Oversized solid steel blue-grey (mid-tone, slightly bluish, about #7A8494; not charcoal, not silver, not beige-grey) sherpa fleece pullover hoodie, dropped shoulders, roomy soft hood, grey ribbed cuffs and hem band, one large kangaroo pocket. The fleece is a FINE, TIGHT, SHORT curly pile (small dense curls like lamb's wool, as in the texture reference), not long fluffy teddy fur. Plain front and back: no drawstrings, no hood cords, no logos, no prints, no text. These references are on-model photos: copy only the hoodie, not the person. Reproduce the colour layout, proportions and curly sherpa texture exactly as in the references. No people, no mannequin visible, no other brand logos, no hang tags, no text overlays.
+
+**Realism (include in every prompt):** REALISM = real product photography for an online store, not an illustration or 3D render. Shot on a full-frame camera, 50-85mm lens, natural or softbox light, true-to-life colour that matches the references. Fabric must behave like real heavy fleece: soft weight, natural wrinkles and folds where it bends, slight imperfections, visible individual curls, no plastic sheen, no airbrushed smoothness, no glow, no HDR, no over-sharpening. Keep the exact same blue-grey in every image (do not drift to charcoal or lavender under warm light). Simple believable scenes only, ordinary real-life props, no fantasy lighting. If a render looks AI-made, CGI or glossy, regenerate it.
 
 ## Shots
 
-1. **Studio front (1:1)**: Ghost-mannequin front view, centred, seamless light warm grey backdrop, soft diffused key
+1. **Studio front (1:1)**: Ghost-mannequin front view, centred, seamless light warm grey (#D9D6D2) backdrop, soft diffused key
    light from top-left, gentle floor shadow, e-commerce catalogue quality.
 2. **Studio back (1:1)**: Same setup, back view.
-3. **Macro detail (4:5)**: Extreme close-up of the sherpa fleece and the neckline/label area, shallow depth of
-   field, soft raking light that shows every curl of the fleece.
-4. **Lifestyle A (4:5)**: The hoodie draped over a chair by a rain-streaked window with a mug of coffee on the sill, soft grey daylight, calm and cozy. Lifestyle brand photography.
-5. **Lifestyle B (4:5)**: The hoodie hanging on a wooden hanger against a white plaster wall with the shadow of a palm leaf, soft warm sunlight. Editorial fashion photography.
-6. **Folded flat lay (1:1)**: Neatly folded hoodie, top-down, on pale grey wool blanket with a ceramic mug and a paperback book, soft even daylight, premium feel.
+3. **Macro detail (4:5)**: Close-up of the sherpa fleece at the chest and the hood seam, 85-100mm macro look, shallow depth of field, soft side light so every individual curl of the pile is visible. Real fabric, tight curls, no fur-like strands.
+4. **Lifestyle A (4:5)**: The hoodie draped over the back of a plain wooden chair in a real home interior next to a window, soft overcast daylight, one ceramic mug on a table nearby, natural creases, shallow depth of field. Lifestyle brand photography.
+5. **Lifestyle B (4:5)**: The hoodie hanging on a plain wooden hanger on a white plaster wall (slightly textured, as in a real room), soft window light from the side, gentle natural shadow, no props. Editorial fashion photography.
+6. **Folded flat lay (1:1)**: Neatly folded hoodie, top-down, on a plain off-white linen cloth or light wooden floor, no props or only one simple ceramic mug, soft even daylight, premium feel.
 
 ## Videos (after the images are approved)
 
@@ -43,6 +44,6 @@ Model: `seedance_2_5`, `mode: "omni_reference"`, `resolution: "720p"` (the highe
 Video 7 uses the best studio image (shot 1) as `start_image`; video 8 uses the approved shot 4 image.
 
 7. **Hero turntable (1:1, 8s, no audio, start_image = shot 1)**: The hoodie on an invisible mannequin slowly rotates 360° on the
-   light warm grey studio set; the sherpa fleece catches the soft light; smooth, loopable.
+   light warm grey (#D9D6D2) studio set; the sherpa fleece catches the soft light; smooth, loopable.
 8. **Lifestyle motion (3:4, 10s, soft ambient audio, start_image = shot 4)**: A slow cinematic dolly-in on the scene from shot 4,
    with gentle natural movement in the light and air, ending on a close-up of the fleece texture.

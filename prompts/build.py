@@ -143,17 +143,35 @@ COLOURS = {
             ("f5e74915-1854-4887-9c76-0d0ae0ece19d", "sherpa texture close-up"),
             ("3c681b3e-d758-47eb-bd0e-65ed1d522f42", "hood up, hood shape"),
         ],
-        "desc": "Oversized solid cool slate-grey curly sherpa fleece pullover hoodie, dropped shoulders, grey "
-                "hood, grey ribbed cuffs and hem band, kangaroo pocket. These references are on-model photos: "
-                "copy only the hoodie, not the person.",
-        "bg": "light warm grey",
-        "scene_a": "draped over a chair by a rain-streaked window with a mug of coffee on the sill, soft grey "
-                   "daylight, calm and cozy",
-        "scene_b": "hanging on a wooden hanger against a white plaster wall with the shadow of a palm leaf, "
-                   "soft warm sunlight",
-        "flat": "pale grey wool blanket with a ceramic mug and a paperback book",
+        "desc": "Oversized solid steel blue-grey (mid-tone, slightly bluish, about #7A8494; not charcoal, not silver, "
+                "not beige-grey) sherpa fleece pullover hoodie, dropped shoulders, roomy soft hood, grey ribbed cuffs "
+                "and hem band, one large kangaroo pocket. The fleece is a FINE, TIGHT, SHORT curly pile (small dense "
+                "curls like lamb's wool, as in the texture reference), not long fluffy teddy fur. Plain front and "
+                "back: no drawstrings, no hood cords, no logos, no prints, no text. These references are on-model "
+                "photos: copy only the hoodie, not the person.",
+        "realism": "REALISM = real product photography for an online store, not an illustration or 3D render. "
+                   "Shot on a full-frame camera, 50-85mm lens, natural or softbox light, true-to-life colour that "
+                   "matches the references. Fabric must behave like real heavy fleece: soft weight, natural "
+                   "wrinkles and folds where it bends, slight imperfections, visible individual curls, no plastic "
+                   "sheen, no airbrushed smoothness, no glow, no HDR, no over-sharpening. Keep the exact same "
+                   "blue-grey in every image (do not drift to charcoal or lavender under warm light). Simple "
+                   "believable scenes only, ordinary real-life props, no fantasy lighting. If a render looks AI-made, "
+                   "CGI or glossy, regenerate it.",
+        "bg": "light warm grey (#D9D6D2)",
+        "macro": "Close-up of the sherpa fleece at the chest and the hood seam, 85-100mm macro look, shallow depth of "
+                 "field, soft side light so every individual curl of the pile is visible. Real fabric, tight "
+                 "curls, no fur-like strands.",
+        "scene_a": "draped over the back of a plain wooden chair in a real home interior next to a window, soft overcast "
+                   "daylight, one ceramic mug on a table nearby, natural creases, shallow depth of field",
+        "scene_b": "hanging on a plain wooden hanger on a white plaster wall (slightly textured, as in a real room), soft "
+                   "window light from the side, gentle natural shadow, no props",
+        "flat": "a plain off-white linen cloth or light wooden floor, no props or only one "
+                "simple ceramic mug",
     },
 }
+
+DEFAULT_MACRO = ("Extreme close-up of the sherpa fleece and the neckline/label area, shallow depth of\n   field, soft raking light "
+                 "that shows every curl of the fleece.")
 
 TEMPLATE = """# Clothsomnia: {title} hoodie prompts
 
@@ -177,15 +195,14 @@ Pass all four as `image_references` on every generation:
 
 ## Product description (include in every prompt)
 
-{desc} {rules}
+{desc} {rules}{realism}
 
 ## Shots
 
 1. **Studio front (1:1)**: Ghost-mannequin front view, centred, seamless {bg} backdrop, soft diffused key
    light from top-left, gentle floor shadow, e-commerce catalogue quality.
 2. **Studio back (1:1)**: Same setup, back view.
-3. **Macro detail (4:5)**: Extreme close-up of the sherpa fleece and the neckline/label area, shallow depth of
-   field, soft raking light that shows every curl of the fleece.
+3. **Macro detail (4:5)**: {macro}
 4. **Lifestyle A (4:5)**: The hoodie {scene_a}. Lifestyle brand photography.
 5. **Lifestyle B (4:5)**: The hoodie {scene_b}. Editorial fashion photography.
 6. **Folded flat lay (1:1)**: Neatly folded hoodie, top-down, on {flat}, soft even daylight, premium feel.
@@ -205,7 +222,11 @@ Video 7 uses the best studio image (shot 1) as `start_image`; video 8 uses the a
 out = Path(__file__).parent
 for slug, c in COLOURS.items():
     refs = "\n".join(f"- `{mid}`: {label}" for mid, label in c["refs"])
-    (out / f"{slug}.md").write_text(TEMPLATE.format(refs=refs, rules=COMMON_RULES, **{k: v for k, v in c.items() if k != "refs"}))
+    extra = {"realism": "", "macro": DEFAULT_MACRO}
+    extra.update({k: v for k, v in c.items() if k != "refs"})
+    if extra["realism"]:
+        extra["realism"] = "\n\n**Realism (include in every prompt):** " + extra["realism"]
+    (out / f"{slug}.md").write_text(TEMPLATE.format(refs=refs, rules=COMMON_RULES, **extra))
 
 index = ["# Clothsomnia prompt packs", "",
          "One file per colourway. Paste a file into a Claude chat with Higgsfield on (not Claude Code, where the",

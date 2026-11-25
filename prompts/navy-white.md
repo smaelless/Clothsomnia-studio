@@ -1,7 +1,7 @@
-# Clothsomnia – Navy/White hoodie: generation prompts
+# Clothsomnia: Navy/White hoodie prompts
 
-Paste this whole file into a **Claude chat** (claude.ai or the Claude app, not Claude Code) that has the Higgsfield connector,
-then say: "Generate these 6 images with Higgsfield using my unlimited trial (use_unlim true)."
+Paste this whole file into a **Claude chat** (claude.ai or the Claude app, not Claude Code) with the Higgsfield
+connector turned on, then say: "Generate these 6 images with Higgsfield using my unlimited trial (use_unlim true)."
 
 ## Reference images (already uploaded to my Higgsfield workspace)
 
@@ -15,44 +15,35 @@ Pass all four as `image_references` on every generation:
 ## Model and settings (best available on the unlimited trial)
 
 - **Images:** `gpt_image_2_6`, `quality: "max"`, `resolution: "4k"`, `use_unlim: true`.
-  It is the most accurate trial model at copying a product from reference photos.
 - **If the trial rejects max/4k:** step down one notch at a time (`xhigh`, then `high`; `4k`, then `2k`) and keep the
   highest setting it accepts.
-- **Second opinion:** also run shot 1 on `nano_banana_pro` (`resolution: "4k"`, all four references as
+- **Second opinion:** also run shot 1 on `nano_banana_pro` (`resolution: "4k"`, same four references as
   `image_references`, `use_unlim: true`) and keep whichever model matches the real hoodie best for the rest.
-- Check every result against the reference photos: the panel shapes, the navy colour and the sherpa texture must match.
-  Regenerate any image that changes the design.
+- Check every result against the reference photos (colours, panel shapes, sherpa texture) and regenerate any image
+  that changes the design.
 
-## Product description (keep in every prompt)
+## Product description (include in every prompt)
 
-Oversized sherpa fleece pullover hoodie, deep navy with two wide off-white sherpa panels running diagonally
-from the shoulders down to the hem on the front; the white panels continue down the sides of the back. Navy hood,
-navy ribbed cuffs and hem band, kangaroo pocket, small "Clothsomnia" script label inside the neck.
-Reproduce the colour-block layout, proportions and curly sherpa texture exactly. No people, no other brand logos,
-no hang tags, no text overlays.
+Oversized sherpa fleece pullover hoodie, deep navy with two wide off-white sherpa panels running diagonally from the shoulders down to the hem on the front; the white panels continue down the sides of the back. Navy hood, navy ribbed cuffs and hem band, kangaroo pocket, small "Clothsomnia" script label inside the neck. Reproduce the colour layout, proportions and curly sherpa texture exactly as in the references. No people, no mannequin visible, no other brand logos, no hang tags, no text overlays.
 
 ## Shots
 
-1. **Studio front (1:1)**: Ghost-mannequin front view, centred, seamless warm light-grey backdrop, soft diffused
-   key light from top-left, gentle floor shadow, e-commerce catalogue quality.
-2. **Studio back (1:1)**: Same setup, back view, showing how the white panels wrap to the back.
-3. **Macro detail (4:5)**: Extreme close-up where navy and off-white sherpa meet at the seam, with the
-   "Clothsomnia" neck label visible, shallow depth of field, soft raking light to show the fleece curls.
-4. **Cozy bed (4:5)**: The hoodie casually laid on an unmade bed with crisp white linen, morning sunlight
-   through sheer curtains, warm and dreamy, a cup of mint tea on a bedside table, lifestyle brand photography.
-5. **Moroccan riad (4:5)**: The hoodie draped over a carved cedar-wood chair in a sunlit Moroccan riad courtyard,
-   zellige tiles, terracotta pots, soft golden-hour light, editorial fashion photography.
-6. **Folded flat-lay (1:1)**: Neatly folded hoodie, top-down, on a beige linen surface with minimal props
-   (dried pampas grass, a small ceramic dish), soft even daylight, premium packaging-shot feel.
+1. **Studio front (1:1)**: Ghost-mannequin front view, centred, seamless warm light-grey backdrop, soft diffused key
+   light from top-left, gentle floor shadow, e-commerce catalogue quality.
+2. **Studio back (1:1)**: Same setup, back view.
+3. **Macro detail (4:5)**: Extreme close-up of the sherpa fleece and the neckline/label area, shallow depth of
+   field, soft raking light that shows every curl of the fleece.
+4. **Lifestyle A (4:5)**: The hoodie casually laid on an unmade bed with crisp white linen, morning sunlight through sheer curtains, a cup of mint tea on the bedside table, warm and dreamy. Lifestyle brand photography.
+5. **Lifestyle B (4:5)**: The hoodie draped over a carved cedar-wood chair in a sunlit Moroccan riad courtyard, zellige tiles, terracotta pots, soft golden-hour light. Editorial fashion photography.
+6. **Folded flat lay (1:1)**: Neatly folded hoodie, top-down, on beige linen surface with dried pampas grass and a small ceramic dish, soft even daylight, premium feel.
 
 ## Videos (after the images are approved)
 
 Model: `seedance_2_5`, `mode: "omni_reference"`, `resolution: "4k"` (fallback `1080p`), `use_unlim: true`.
-This is the strongest video model on the trial. Use the best generated studio image (shot 1) as `start_image` and the
-four reference photos as `image_references`. No people, no text.
+Use the best generated studio image (shot 1) as `start_image` and the four reference photos as `image_references`.
+No people, no text.
 
 7. **Hero turntable (1:1, 8s, no audio)**: The hoodie on an invisible mannequin slowly rotates 360° on the
-   light-grey studio set; the sherpa fleece catches the soft light; smooth, loopable.
-8. **Cozy morning (3:4, 10s, soft ambient audio)**: Slow cinematic dolly-in across the bed from shot 4: sunlight
-   moves across the hoodie, the curtains drift in a light breeze, dust motes float in the light; ends on a close-up of
-   the "Clothsomnia" neck label.
+   warm light-grey studio set; the sherpa fleece catches the soft light; smooth, loopable.
+8. **Lifestyle motion (3:4, 10s, soft ambient audio)**: A slow cinematic dolly-in on the scene from shot 4,
+   with gentle natural movement in the light and air, ending on a close-up of the fleece texture.

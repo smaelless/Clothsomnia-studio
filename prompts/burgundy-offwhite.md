@@ -23,7 +23,9 @@ Pass all four as `image_references` on every generation:
 
 ## Product description (include in every prompt)
 
-Oversized sherpa fleece pullover hoodie, deep burgundy / wine red with two wide off-white sherpa panels running diagonally from the shoulders down to the hem on the front; the off-white panels continue down the sides of the back. Burgundy hood, burgundy ribbed cuffs and hem band, kangaroo pocket, small dark "Clothsomnia" script label inside the neck. Reproduce the colour layout, proportions and curly sherpa texture exactly as in the references. No people, no mannequin visible, no other brand logos, no hang tags, no text overlays.
+Oversized sherpa fleece pullover hoodie, deep burgundy / wine red centre panel in an inverted V (wide at the shoulders, narrowing to a point at the hem) with wide off-white sherpa side panels; the off-white panels continue down the sides of the back. Burgundy hood and sleeves, wide soft sherpa cuffs and hem band in burgundy, same fine pile as the body, NOT ribbed knit, diagonal slit pockets as a subtle seam only, nearly invisible, never a drawn line, no kangaroo pocket, no drawstrings, no hood cords, small dark "Clothsomnia" script label inside the neck. Reproduce the colour layout, proportions and curly sherpa texture exactly as in the references. No people, no mannequin visible, no other brand logos, no hang tags, no text overlays.
+
+**Realism (include in every prompt):** REALISM = real product photography for an online store, not an illustration or 3D render. Shot on a full-frame camera, 50-85mm lens, natural or softbox light, true-to-life colour that matches the references. Fabric must behave like real heavy fleece: soft weight, natural wrinkles and folds where it bends, slight imperfections, visible individual curls, no plastic sheen, no airbrushed smoothness, no glow, no HDR, no over-sharpening. Keep the exact same colours in every image (do not drift under warm light). Simple believable scenes only, ordinary real-life props, no fantasy lighting. If a render looks AI-made, CGI or glossy, regenerate it.
 
 ## Shots
 

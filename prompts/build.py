@@ -6,6 +6,16 @@ COMMON_RULES = (
     "No people, no mannequin visible, no other brand logos, no hang tags, no text overlays."
 )
 
+COMMON_REALISM = (
+    "REALISM = real product photography for an online store, not an illustration or 3D render. "
+    "Shot on a full-frame camera, 50-85mm lens, natural or softbox light, true-to-life colour that "
+    "matches the references. Fabric must behave like real heavy fleece: soft weight, natural "
+    "wrinkles and folds where it bends, slight imperfections, visible individual curls, no plastic "
+    "sheen, no airbrushed smoothness, no glow, no HDR, no over-sharpening. Keep the exact same "
+    "colours in every image (do not drift under warm light). Simple believable scenes only, ordinary "
+    "real-life props, no fantasy lighting. If a render looks AI-made, CGI or glossy, regenerate it."
+)
+
 COLOURS = {
     "navy-white": {
         "title": "Navy/White",
@@ -15,10 +25,12 @@ COLOURS = {
             ("10b9483e-7dcf-4569-abbe-97bf4187bfd3", '"Clothsomnia" neck label close-up'),
             ("a7f4d315-b866-438e-ae63-669b091471bb", "sherpa texture / hem detail"),
         ],
-        "desc": "Oversized sherpa fleece pullover hoodie, deep navy with two wide off-white sherpa panels running "
-                "diagonally from the shoulders down to the hem on the front; the white panels continue down the "
-                "sides of the back. Navy hood, navy ribbed cuffs and hem band, kangaroo pocket, small "
-                '"Clothsomnia" script label inside the neck.',
+        "desc": "Oversized sherpa fleece pullover hoodie, deep navy centre panel in an inverted V (wide at the "
+                "shoulders, narrowing to a point at the hem) with wide off-white sherpa side panels; the white "
+                "panels continue down the sides of the back. Navy hood and sleeves, wide soft sherpa cuffs and "
+                "hem band in navy, same fine pile as the body, NOT ribbed knit, diagonal slit pockets as a subtle "
+                "seam only, nearly invisible, never a drawn line, no kangaroo pocket, no drawstrings, no hood "
+                'cords, small "Clothsomnia" script label inside the neck.',
         "bg": "warm light-grey",
         "scene_a": "casually laid on an unmade bed with crisp white linen, morning sunlight through sheer "
                    "curtains, a cup of mint tea on the bedside table, warm and dreamy",
@@ -34,10 +46,12 @@ COLOURS = {
             ("45f90e6a-28bc-4a5c-97a0-3ccd1a64e696", '"Clothsomnia" neck label close-up'),
             ("7c86c63c-5f2b-49f0-a262-7286508e144f", "sleeve and panel texture detail"),
         ],
-        "desc": "Oversized sherpa fleece pullover hoodie, deep burgundy / wine red with two wide off-white sherpa "
-                "panels running diagonally from the shoulders down to the hem on the front; the off-white panels "
-                "continue down the sides of the back. Burgundy hood, burgundy ribbed cuffs and hem band, kangaroo "
-                'pocket, small dark "Clothsomnia" script label inside the neck.',
+        "desc": "Oversized sherpa fleece pullover hoodie, deep burgundy / wine red centre panel in an inverted V "
+                "(wide at the shoulders, narrowing to a point at the hem) with wide off-white sherpa side panels; "
+                "the off-white panels continue down the sides of the back. Burgundy hood and sleeves, wide soft "
+                "sherpa cuffs and hem band in burgundy, same fine pile as the body, NOT ribbed knit, diagonal "
+                "slit pockets as a subtle seam only, nearly invisible, never a drawn line, no kangaroo pocket, "
+                'no drawstrings, no hood cords, small dark "Clothsomnia" script label inside the neck.',
         "bg": "warm cream",
         "scene_a": "draped over a deep velvet armchair beside a softly glowing fireplace, a knitted throw and a "
                    "steaming cup of tea nearby, cozy winter evening light",
@@ -53,10 +67,12 @@ COLOURS = {
             ("af4970ae-b9c0-40bb-9480-63f4b9ae0cac", "hood and neck label detail"),
             ("83e47eae-914b-48d6-8db1-1b480e2b9a9a", "grey/black seam and texture detail"),
         ],
-        "desc": "Oversized sherpa fleece pullover hoodie, cool slate blue-grey with two wide black sherpa panels "
-                "running diagonally from the shoulders down to the hem on the front; the black panels continue "
-                "down the sides of the back. Grey hood, grey ribbed cuffs and hem band, kangaroo pocket, small "
-                '"Clothsomnia" script label inside the neck.',
+        "desc": "Oversized sherpa fleece pullover hoodie, cool slate grey centre panel in an inverted V (wide at "
+                "the shoulders, narrowing to a point at the hem) with wide black sherpa side panels; the black "
+                "panels continue down the sides of the back. Grey hood and sleeves, wide soft sherpa cuffs and "
+                "hem band in grey, same fine pile as the body, NOT ribbed knit, diagonal slit pockets as a subtle "
+                "seam only, nearly invisible, never a drawn line, no kangaroo pocket, no drawstrings, no hood "
+                'cords, small "Clothsomnia" script label inside the neck.',
         "bg": "cool mid-grey",
         "scene_a": "laid over a raw concrete bench on a city rooftop at blue hour, soft city lights blurred in the "
                    "background, calm urban mood",
@@ -73,7 +89,7 @@ COLOURS = {
             ("8bfc9146-5820-49c8-b351-8dcdcb5bf9de", "side / sleeve detail"),
         ],
         "desc": "Oversized solid jet-black curly sherpa fleece pullover hoodie, dropped shoulders, black hood, "
-                "black ribbed cuffs and hem band, kangaroo pocket, small label inside the neck. The curly sherpa "
+                "wide soft sherpa cuffs and hem band in black, same fine pile as the body, NOT ribbed knit, kangaroo pocket, small label inside the neck. The curly sherpa "
                 "texture must stay visible, not a flat black shape.",
         "bg": "deep charcoal with a subtle gradient",
         "scene_a": "draped over a chair on a Casablanca street at night, Art Deco facade behind, warm street "
@@ -90,8 +106,8 @@ COLOURS = {
             ("30c1bd0e-5190-4abb-8a18-bb86380302bc", "hood and neck label detail (ignore the hang tag)"),
             ("c55d7baf-a4b5-4264-8641-90acbe68c62c", "fleece texture and cuff detail"),
         ],
-        "desc": "Oversized pure bright-white sherpa fleece pullover hoodie, dropped shoulders, white hood, white "
-                "ribbed cuffs and hem band, kangaroo pocket, small dark woven label inside the neck. Keep the "
+        "desc": "Oversized pure bright-white sherpa fleece pullover hoodie, dropped shoulders, white hood, "
+                "wide soft sherpa cuffs and hem band in white, same fine pile as the body, NOT ribbed knit, kangaroo pocket, small dark woven label inside the neck. Keep the "
                 "white clean and neutral, not cream or yellow.",
         "bg": "soft pale grey (so the white stands out)",
         "scene_a": "folded at the foot of a bed with soft grey linen in a bright minimalist bedroom, cool "
@@ -109,7 +125,7 @@ COLOURS = {
             ("09c24a31-d00e-42d0-98df-f3397b304591", "sherpa texture / sleeve detail"),
         ],
         "desc": "Oversized cream / ivory off-white curly sherpa fleece pullover hoodie, dropped shoulders, cream "
-                "hood, cream ribbed cuffs and hem band, kangaroo pocket, small label inside the neck. Keep the warm "
+                "hood, wide soft sherpa cuffs and hem band in cream, same fine pile as the body, NOT ribbed knit, kangaroo pocket, small label inside the neck. Keep the warm "
                 "cream tone, not pure white.",
         "bg": "warm sand-beige",
         "scene_a": "draped over a wooden fence post by a calm lake at golden hour, warm sunlight, ochre cliffs "
@@ -126,7 +142,7 @@ COLOURS = {
             ("e5119c64-ac91-4dec-bd4f-99f7da3c5642", "relaxed fit, how the fleece drapes"),
         ],
         "desc": "Oversized solid muted olive / sage green sherpa fleece pullover hoodie, dropped shoulders, olive "
-                "hood, olive ribbed cuffs and hem band, kangaroo pocket. These references are on-model photos: "
+                "hood, wide soft sherpa cuffs and hem band in olive, same fine pile as the body, NOT ribbed knit, kangaroo pocket. These references are on-model photos: "
                 "copy only the hoodie, not the person.",
         "bg": "warm stone-beige",
         "scene_a": "tossed on a light-grey linen sofa with a chunky knit blanket and a book, soft afternoon "
@@ -143,9 +159,10 @@ COLOURS = {
             ("f5e74915-1854-4887-9c76-0d0ae0ece19d", "sherpa texture close-up"),
             ("3c681b3e-d758-47eb-bd0e-65ed1d522f42", "hood up, hood shape"),
         ],
-        "desc": "Oversized solid steel blue-grey (mid-tone, slightly bluish, about #7A8494; not charcoal, not silver, "
-                "not beige-grey) sherpa fleece pullover hoodie, dropped shoulders, roomy soft hood, grey ribbed cuffs "
-                "and hem band, one large kangaroo pocket. The fleece is a FINE, TIGHT, SHORT curly pile (small dense "
+        "desc": "Oversized solid cool slate grey (neutral mid-grey, about #6D6C76 / RGB 109, 108, 118; not charcoal, "
+                "not silver, not blue-grey, not beige-grey) sherpa fleece pullover hoodie, dropped shoulders, roomy "
+                "soft hood, wide soft sherpa cuffs and hem band in grey, same fine pile as the body, NOT ribbed "
+                "knit, one large kangaroo pocket. The fleece is a FINE, TIGHT, SHORT curly pile (small dense "
                 "curls like lamb's wool, as in the texture reference), not long fluffy teddy fur. Plain front and "
                 "back: no drawstrings, no hood cords, no logos, no prints, no text. These references are on-model "
                 "photos: copy only the hoodie, not the person.",
@@ -154,7 +171,7 @@ COLOURS = {
                    "matches the references. Fabric must behave like real heavy fleece: soft weight, natural "
                    "wrinkles and folds where it bends, slight imperfections, visible individual curls, no plastic "
                    "sheen, no airbrushed smoothness, no glow, no HDR, no over-sharpening. Keep the exact same "
-                   "blue-grey in every image (do not drift to charcoal or lavender under warm light). Simple "
+                   "slate grey in every image (do not drift to charcoal, blue, or lavender under warm light). Simple "
                    "believable scenes only, ordinary real-life props, no fantasy lighting. If a render looks AI-made, "
                    "CGI or glossy, regenerate it.",
         "bg": "light warm grey (#D9D6D2)",
@@ -222,7 +239,7 @@ Video 7 uses the best studio image (shot 1) as `start_image`; video 8 uses the a
 out = Path(__file__).parent
 for slug, c in COLOURS.items():
     refs = "\n".join(f"- `{mid}`: {label}" for mid, label in c["refs"])
-    extra = {"realism": "", "macro": DEFAULT_MACRO}
+    extra = {"realism": COMMON_REALISM, "macro": DEFAULT_MACRO}
     extra.update({k: v for k, v in c.items() if k != "refs"})
     if extra["realism"]:
         extra["realism"] = "\n\n**Realism (include in every prompt):** " + extra["realism"]

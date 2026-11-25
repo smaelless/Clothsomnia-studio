@@ -11,3 +11,4 @@ unlimited trial is blocked) and ask it to generate the images. Reference photos 
 - [Off-white](off-white.md)
 - [Olive Green](olive-green.md)
 - [Grey](grey.md)
+- [Packaging](packaging.md)

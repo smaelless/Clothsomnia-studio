@@ -212,5 +212,6 @@ index = ["# Clothsomnia prompt packs", "",
          "One file per colourway. Paste a file into a Claude chat with Higgsfield on (not Claude Code, where the",
          "unlimited trial is blocked) and ask it to generate the images. Reference photos are already uploaded.", ""]
 index += [f"- [{c['title']}]({slug}.md)" for slug, c in COLOURS.items()]
+index += ["- [Packaging](packaging.md)"]
 (out / "README.md").write_text("\n".join(index) + "\n")
 print("wrote", len(COLOURS), "packs")

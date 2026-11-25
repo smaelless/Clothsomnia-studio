@@ -23,28 +23,32 @@ Pass all four as `image_references` on every generation:
 
 ## Product description (include in every prompt)
 
-Oversized sherpa fleece pullover hoodie, cool slate grey (about #6D6C76 / RGB 109, 108, 118, the same grey as the solid Grey hoodie) centre panel in an inverted V (wide at the shoulders, narrowing to a point at the hem) with wide black sherpa side panels; the black panels continue down the sides of the back. Grey hood and sleeves, wide soft sherpa cuffs and hem band in grey, same fine pile as the body, NOT ribbed knit, diagonal slit pockets as a subtle seam only, nearly invisible, never a drawn line, no kangaroo pocket, no drawstrings, no hood cords, small "Clothsomnia" script label inside the neck. Reproduce the colour layout, proportions and curly sherpa texture exactly as in the references. No people, no mannequin visible, no other brand logos, no hang tags, no text overlays.
+Oversized sherpa fleece pullover hoodie, cool slate grey (about #6D6C76 / RGB 109, 108, 118, the same grey as the solid Grey hoodie) centre panel in an inverted V (wide at the shoulders, narrowing to a point at the hem) with wide near-neutral black (#171718) sherpa side panels; the black panels continue down the sides of the back. Grey hood and sleeves, wide soft sherpa cuffs and hem band in grey, same fine pile as the body, NOT ribbed knit, diagonal slit pockets as a subtle seam only, nearly invisible, never a drawn line, no kangaroo pocket, no drawstrings, no hood cords, small "Clothsomnia" script label inside the neck. Reproduce the colour layout, proportions and curly sherpa texture exactly as in the references. The fleece is a FINE, TIGHT, SHORT curly pile (small dense curls like lamb's wool), not long fluffy teddy fur. No drawstrings, no hood cords, no prints or text on the outside of the garment. No people, no visible mannequin (studio shots use an invisible ghost-mannequin effect), no other brand logos, no hang tags, no text overlays.
 
-**Realism (include in every prompt):** REALISM = real product photography for an online store, not an illustration or 3D render. Shot on a full-frame camera, 50-85mm lens, natural or softbox light, true-to-life colour that matches the references. Fabric must behave like real heavy fleece: soft weight, natural wrinkles and folds where it bends, slight imperfections, visible individual curls, no plastic sheen, no airbrushed smoothness, no glow, no HDR, no over-sharpening. Keep the exact same colours in every image (do not drift under warm light). Simple believable scenes only, ordinary real-life props, no fantasy lighting. If a render looks AI-made, CGI or glossy, regenerate it.
+**Realism (include in every prompt):** REALISM = real product photography for an online store, not an illustration or 3D render. Shot on a full-frame camera, 50-85mm lens, natural or softbox light, true-to-life colour that matches the references. Fabric must behave like real heavy fleece: soft weight, natural wrinkles and folds where it bends, slight imperfections, visible individual curls, no plastic sheen, no airbrushed smoothness, no glow, no HDR, no over-sharpening. Keep the exact same colours in every image (see the colour lock), neutral daylight only, never warm or coloured light on the garment. Simple believable scenes only, ordinary real-life props, no fantasy lighting. If a render looks AI-made, CGI or glossy, regenerate it.
+
+**Colour lock (include in every prompt):** Slate grey #6D6C76 (RGB 109,108,118) for centre, hood, sleeves, cuffs and hem; black #171718 for the side panels. Never lighter or lavender. Measured from the real product photos. If a render is lighter, bluer, warmer, greener or more saturated than these values, regenerate it.
 
 ## Shots
 
-1. **Studio front (1:1)**: Ghost-mannequin front view, centred, seamless cool mid-grey backdrop, soft diffused key
+1. **Studio front (1:1)**: Ghost-mannequin front view, centred, seamless light warm sand-white (#EFEDE9) backdrop, soft diffused key
    light from top-left, gentle floor shadow, e-commerce catalogue quality.
 2. **Studio back (1:1)**: Same setup, back view.
 3. **Macro detail (4:5)**: Extreme close-up of the sherpa fleece and the neckline/label area, shallow depth of
    field, soft raking light that shows every curl of the fleece.
-4. **Lifestyle A (4:5)**: The hoodie laid over a raw concrete bench on a city rooftop at blue hour, soft city lights blurred in the background, calm urban mood. Lifestyle brand photography.
-5. **Lifestyle B (4:5)**: The hoodie hanging on a matte-black steel rail in a minimalist concrete loft with large windows, soft overcast daylight. Editorial fashion photography.
+4. **Lifestyle A (4:5)**: The hoodie laid over a plain wooden bench on a bright balcony, soft overcast daylight, simple blurred city background. Lifestyle brand photography.
+5. **Lifestyle B (4:5)**: The hoodie hanging on a matte-black rail in a minimal room with large windows, soft overcast daylight. Editorial fashion photography.
 6. **Folded flat lay (1:1)**: Neatly folded hoodie, top-down, on smooth light-grey concrete with a black ceramic cup and a pair of wireless headphones (unbranded), soft even daylight, premium feel.
 
 ## Videos (after the images are approved)
 
 Model: `seedance_2_5`, `mode: "omni_reference"`, `resolution: "720p"` (the highest the free trial covers),
 `use_unlim: true`. Use the four reference photos as `image_references`. No people, no text.
-Video 7 uses the best studio image (shot 1) as `start_image`; video 8 uses the approved shot 4 image.
+Video 7 uses the best studio image (shot 1) as `start_image`; video 8 uses the approved shot 4 image; video 9 uses shot 1 again.
 
 7. **Hero turntable (1:1, 8s, no audio, start_image = shot 1)**: The hoodie on an invisible mannequin slowly rotates 360° on the
-   cool mid-grey studio set; the sherpa fleece catches the soft light; smooth, loopable.
+   light warm sand-white (#EFEDE9) studio set; the sherpa fleece catches the soft light; smooth, loopable.
 8. **Lifestyle motion (3:4, 10s, soft ambient audio, start_image = shot 4)**: A slow cinematic dolly-in on the scene from shot 4,
    with gentle natural movement in the light and air, ending on a close-up of the fleece texture.
+9. **Reels cut (9:16, 8s, soft ambient audio, start_image = shot 1)**: Vertical clip for Meta Reels and Stories. A slow vertical push-in
+   on the hoodie on the light warm sand-white (#EFEDE9) studio set, a gentle fabric ripple as if a breeze passes, ending on a close-up of the fleece curls.

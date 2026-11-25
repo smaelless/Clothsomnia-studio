@@ -23,9 +23,11 @@ Pass all four as `image_references` on every generation:
 
 ## Product description (include in every prompt)
 
-Oversized solid cool slate grey (neutral mid-grey, about #6D6C76 / RGB 109, 108, 118; not charcoal, not silver, not blue-grey, not beige-grey) sherpa fleece pullover hoodie, dropped shoulders, roomy soft hood, wide soft sherpa cuffs and hem band in grey, same fine pile as the body, NOT ribbed knit, one large kangaroo pocket. The fleece is a FINE, TIGHT, SHORT curly pile (small dense curls like lamb's wool, as in the texture reference), not long fluffy teddy fur. Plain front and back: no drawstrings, no hood cords, no logos, no prints, no text. These references are on-model photos: copy only the hoodie, not the person. Reproduce the colour layout, proportions and curly sherpa texture exactly as in the references. No people, no mannequin visible, no other brand logos, no hang tags, no text overlays.
+Oversized solid cool slate grey (neutral mid-grey, about #6D6C76 / RGB 109, 108, 118; not charcoal, not silver, not blue-grey, not beige-grey) sherpa fleece pullover hoodie, dropped shoulders, roomy soft hood, wide soft sherpa cuffs and hem band in grey, same fine pile as the body, NOT ribbed knit, one large kangaroo pocket. The fleece is a FINE, TIGHT, SHORT curly pile (small dense curls like lamb's wool, as in the texture reference), not long fluffy teddy fur. Plain front and back: no drawstrings, no hood cords, no logos, no prints, no text. These references are on-model photos: copy only the hoodie, not the person. Reproduce the colour layout, proportions and curly sherpa texture exactly as in the references. The fleece is a FINE, TIGHT, SHORT curly pile (small dense curls like lamb's wool), not long fluffy teddy fur. No drawstrings, no hood cords, no prints or text on the outside of the garment. No people, no visible mannequin (studio shots use an invisible ghost-mannequin effect), no other brand logos, no hang tags, no text overlays.
 
 **Realism (include in every prompt):** REALISM = real product photography for an online store, not an illustration or 3D render. Shot on a full-frame camera, 50-85mm lens, natural or softbox light, true-to-life colour that matches the references. Fabric must behave like real heavy fleece: soft weight, natural wrinkles and folds where it bends, slight imperfections, visible individual curls, no plastic sheen, no airbrushed smoothness, no glow, no HDR, no over-sharpening. Keep the exact same slate grey in every image (do not drift to charcoal, blue, or lavender under warm light). Simple believable scenes only, ordinary real-life props, no fantasy lighting. If a render looks AI-made, CGI or glossy, regenerate it.
+
+**Colour lock (include in every prompt):** Slate grey #6D6C76 (RGB 109,108,118) everywhere. Measured from the real product photos. If a render is lighter, bluer, warmer, greener or more saturated than these values, regenerate it.
 
 ## Shots
 
@@ -35,15 +37,17 @@ Oversized solid cool slate grey (neutral mid-grey, about #6D6C76 / RGB 109, 108,
 3. **Macro detail (4:5)**: Close-up of the sherpa fleece at the chest and the hood seam, 85-100mm macro look, shallow depth of field, soft side light so every individual curl of the pile is visible. Real fabric, tight curls, no fur-like strands.
 4. **Lifestyle A (4:5)**: The hoodie draped over the back of a plain wooden chair in a real home interior next to a window, soft overcast daylight, one ceramic mug on a table nearby, natural creases, shallow depth of field. Lifestyle brand photography.
 5. **Lifestyle B (4:5)**: The hoodie hanging on a plain wooden hanger on a white plaster wall (slightly textured, as in a real room), soft window light from the side, gentle natural shadow, no props. Editorial fashion photography.
-6. **Folded flat lay (1:1)**: Neatly folded hoodie, top-down, on a plain off-white linen cloth or light wooden floor, no props or only one simple ceramic mug, soft even daylight, premium feel.
+6. **Folded flat lay (1:1)**: Neatly folded hoodie, top-down, on a plain off-white linen cloth, no props, soft even daylight, premium feel.
 
 ## Videos (after the images are approved)
 
 Model: `seedance_2_5`, `mode: "omni_reference"`, `resolution: "720p"` (the highest the free trial covers),
 `use_unlim: true`. Use the four reference photos as `image_references`. No people, no text.
-Video 7 uses the best studio image (shot 1) as `start_image`; video 8 uses the approved shot 4 image.
+Video 7 uses the best studio image (shot 1) as `start_image`; video 8 uses the approved shot 4 image; video 9 uses shot 1 again.
 
 7. **Hero turntable (1:1, 8s, no audio, start_image = shot 1)**: The hoodie on an invisible mannequin slowly rotates 360° on the
    light warm grey (#D9D6D2) studio set; the sherpa fleece catches the soft light; smooth, loopable.
 8. **Lifestyle motion (3:4, 10s, soft ambient audio, start_image = shot 4)**: A slow cinematic dolly-in on the scene from shot 4,
    with gentle natural movement in the light and air, ending on a close-up of the fleece texture.
+9. **Reels cut (9:16, 8s, soft ambient audio, start_image = shot 1)**: Vertical clip for Meta Reels and Stories. A slow vertical push-in
+   on the hoodie on the light warm grey (#D9D6D2) studio set, a gentle fabric ripple as if a breeze passes, ending on a close-up of the fleece curls.

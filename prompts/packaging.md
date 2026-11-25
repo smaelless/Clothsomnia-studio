@@ -35,7 +35,7 @@ The folded sherpa hoodie shows softly through the frosted plastic.
 fine black wavy contour-line artwork in two corners, a vertical rule with "More Than Clothes" in the top-right
 corner, a handwritten signature at bottom-left, and the social icons with "Clothsomnia" along the bottom edge.
 
-Keep all printed text exactly as written above. No people, no other brand logos, no extra text.
+Keep all printed text exactly as written above. No people, no other brand logos, no extra text. No hang tags. Real product photography, not a render, with neutral daylight. Hoodie colours must match the hex values in `colours.md`.
 
 ## Shots
 
@@ -46,7 +46,7 @@ Keep all printed text exactly as written above. No people, no other brand logos,
    sherpa hoodie visible through it; the lid rests beside the box. Beige linen surface, a dried pampas sprig,
    soft morning daylight.
 3. **Collection stack (4:5)**: Several frosted bags stacked neatly, each showing a different hoodie colour through the
-   plastic (navy, burgundy, olive, grey, cream), with the gift box on top. Warm minimalist shelf, editorial look.
+   plastic (navy, burgundy, steel grey/black, black, white, cream, olive, grey), with the gift box on top. Warm minimalist shelf, editorial look.
 4. **Bag close-up (4:5)**: Macro shot of the frosted bag over a folded cream sherpa hoodie. The fleece curls are
    visible through the plastic, and the "MADE WITH CARE AND LOVE IN MOROCCO BY DREAMERS" print is sharp. Shallow
    depth of field, soft side light.

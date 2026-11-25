@@ -3,7 +3,9 @@ from pathlib import Path
 
 COMMON_RULES = (
     "Reproduce the colour layout, proportions and curly sherpa texture exactly as in the references. "
-    "No people, no mannequin visible, no other brand logos, no hang tags, no text overlays."
+    "The fleece is a FINE, TIGHT, SHORT curly pile (small dense curls like lamb's wool), not long fluffy teddy fur. "
+    "No drawstrings, no hood cords, no prints or text on the outside of the garment. "
+    "No people, no visible mannequin (studio shots use an invisible ghost-mannequin effect), no other brand logos, no hang tags, no text overlays."
 )
 
 COMMON_REALISM = (
@@ -12,7 +14,7 @@ COMMON_REALISM = (
     "matches the references. Fabric must behave like real heavy fleece: soft weight, natural "
     "wrinkles and folds where it bends, slight imperfections, visible individual curls, no plastic "
     "sheen, no airbrushed smoothness, no glow, no HDR, no over-sharpening. Keep the exact same "
-    "colours in every image (do not drift under warm light). Simple believable scenes only, ordinary "
+    "colours in every image (see the colour lock), neutral daylight only, never warm or coloured light on the garment. Simple believable scenes only, ordinary "
     "real-life props, no fantasy lighting. If a render looks AI-made, CGI or glossy, regenerate it."
 )
 
@@ -187,6 +189,70 @@ COLOURS = {
     },
 }
 
+
+TAIL = " Measured from the real product photos. If a render is lighter, bluer, warmer, greener or more saturated than these values, regenerate it."
+
+DESC_FIX = {
+    "navy-white": [("deep navy centre panel", "very dark navy (#1E1D28, almost black-blue, never bright or royal navy) centre panel"),
+                   ("wide off-white sherpa side panels", "wide snow-white (#E5E2DE) sherpa side panels")],
+    "burgundy-offwhite": [("deep burgundy / wine red centre panel", "deep burgundy / wine red (#4C181F) centre panel"),
+                          ("wide off-white sherpa side panels", "wide cream off-white (#E8DFCE, warmer and slightly darker than snow-white) sherpa side panels")],
+    "grey-black": [("wide black sherpa side panels", "wide near-neutral black (#171718) sherpa side panels")],
+    "black": [("solid jet-black curly sherpa", "solid near-neutral black (#171718, not pure #000, not brown or warm) curly sherpa")],
+    "white": [("pure bright-white sherpa", "clean snow-white (#E5E2DE, slightly cool) sherpa")],
+    "off-white": [("cream / ivory off-white curly", "warm cream off-white (#E8DFCE, warmer and slightly darker than snow-white) curly")],
+    "olive-green": [("solid muted olive / sage green sherpa", "solid dark green-grey olive (#4F4E44, RGB 79,78,68; dark and muted, not sage, not bright green, not khaki) sherpa")],
+}
+LOCK = {
+    "navy-white": "Navy #1E1D28 (very dark, almost black-blue) for centre, hood, sleeves, cuffs and hem; snow-white #E5E2DE for the side panels.",
+    "burgundy-offwhite": "Burgundy #4C181F (deep wine red) for centre, hood, sleeves, cuffs and hem; cream off-white #E8DFCE for the side panels (cream is warmer and slightly darker than snow-white; never render the two whites the same).",
+    "grey-black": "Slate grey #6D6C76 (RGB 109,108,118) for centre, hood, sleeves, cuffs and hem; black #171718 for the side panels. Never lighter or lavender.",
+    "black": "Near-neutral black #171718 everywhere. Curls must stay visible, not a flat black shape.",
+    "white": "Snow-white #E5E2DE everywhere (slightly cool white, cooler and slightly lighter than the cream Off-White #E8DFCE; not cream, not pure #FFFFFF).",
+    "off-white": "Warm cream off-white #E8DFCE everywhere. Off-White is cream: warmer and slightly darker than Snow-White (#E5E2DE); never render the two whites the same. Not pure white, not yellow.",
+    "olive-green": "Dark green-grey olive #4F4E44 (RGB 79,78,68) everywhere. Dark and muted, not sage, not bright green.",
+    "grey": "Slate grey #6D6C76 (RGB 109,108,118) everywhere.",
+}
+BG = {
+    "burgundy-offwhite": "light warm grey (#D9D6D2)",
+    "grey-black": "light warm sand-white (#EFEDE9)",
+    "black": "light warm grey (#D9D6D2)",
+    "off-white": "light cool grey (#CFCFD2)",
+}
+SCENES = {
+    "navy-white": ("laid on an unmade bed with crisp white linen, soft overcast morning daylight through sheer curtains, a glass of water on the bedside table",
+                   "draped over a plain wooden chair in a bright room with a whitewashed wall, soft window daylight, one terracotta pot nearby"),
+    "burgundy-offwhite": ("draped over a plain armchair beside a window in a living room, soft overcast daylight, a knitted throw and a cup of tea nearby",
+                          "hung on a brass hook against a plain cream plaster wall, soft window light from the side, no props"),
+    "grey-black": ("laid over a plain wooden bench on a bright balcony, soft overcast daylight, simple blurred city background",
+                   "hanging on a matte-black rail in a minimal room with large windows, soft overcast daylight"),
+    "black": ("draped over a plain chair in a bright room with a white wall, soft diffuse window light so the curly texture stays visible, no harsh shadows",
+              "hanging on a wooden hanger on a white plaster wall, soft window light from the side, gentle natural shadow, no props"),
+    "white": (None,
+              "hanging on a plain wooden hanger against a pale sand plaster wall, soft daylight, the white clearly distinct from the wall"),
+    "off-white": ("draped over a wooden bench beside a window in a calm room, soft neutral daylight",
+                  "laid on a natural-fibre rug on a plain wooden floor, soft daylight from the side"),
+    "olive-green": (None,
+                    "hanging on a wooden peg on a plain wooden wall, soft natural window light, no props"),
+}
+FLAT_FIX = {"grey": "a plain off-white linen cloth, no props"}
+NO_BACK = {"black", "white", "off-white"}
+
+for slug, c in COLOURS.items():
+    for old, new in DESC_FIX.get(slug, []):
+        assert old in c["desc"], (slug, old)
+        c["desc"] = c["desc"].replace(old, new)
+    c["lock"] = LOCK[slug] + TAIL
+    if slug in BG: c["bg"] = BG[slug]
+    if slug in SCENES:
+        a, b = SCENES[slug]
+        if a: c["scene_a"] = a
+        c["scene_b"] = b
+    if slug in FLAT_FIX: c["flat"] = FLAT_FIX[slug]
+    c["back"] = ("Same setup, back view. NOTE: this colourway has no back-view reference. Upload a real back photo and add its ID to "
+                 "image_references first, otherwise skip this shot (the model would invent the back)."
+                 if slug in NO_BACK else "Same setup, back view.")
+
 DEFAULT_MACRO = ("Extreme close-up of the sherpa fleece and the neckline/label area, shallow depth of\n   field, soft raking light "
                  "that shows every curl of the fleece.")
 
@@ -214,11 +280,13 @@ Pass all four as `image_references` on every generation:
 
 {desc} {rules}{realism}
 
+**Colour lock (include in every prompt):** {lock}
+
 ## Shots
 
 1. **Studio front (1:1)**: Ghost-mannequin front view, centred, seamless {bg} backdrop, soft diffused key
    light from top-left, gentle floor shadow, e-commerce catalogue quality.
-2. **Studio back (1:1)**: Same setup, back view.
+2. **Studio back (1:1)**: {back}
 3. **Macro detail (4:5)**: {macro}
 4. **Lifestyle A (4:5)**: The hoodie {scene_a}. Lifestyle brand photography.
 5. **Lifestyle B (4:5)**: The hoodie {scene_b}. Editorial fashion photography.
@@ -228,12 +296,14 @@ Pass all four as `image_references` on every generation:
 
 Model: `seedance_2_5`, `mode: "omni_reference"`, `resolution: "720p"` (the highest the free trial covers),
 `use_unlim: true`. Use the four reference photos as `image_references`. No people, no text.
-Video 7 uses the best studio image (shot 1) as `start_image`; video 8 uses the approved shot 4 image.
+Video 7 uses the best studio image (shot 1) as `start_image`; video 8 uses the approved shot 4 image; video 9 uses shot 1 again.
 
 7. **Hero turntable (1:1, 8s, no audio, start_image = shot 1)**: The hoodie on an invisible mannequin slowly rotates 360° on the
    {bg} studio set; the sherpa fleece catches the soft light; smooth, loopable.
 8. **Lifestyle motion (3:4, 10s, soft ambient audio, start_image = shot 4)**: A slow cinematic dolly-in on the scene from shot 4,
    with gentle natural movement in the light and air, ending on a close-up of the fleece texture.
+9. **Reels cut (9:16, 8s, soft ambient audio, start_image = shot 1)**: Vertical clip for Meta Reels and Stories. A slow vertical push-in
+   on the hoodie on the {bg} studio set, a gentle fabric ripple as if a breeze passes, ending on a close-up of the fleece curls.
 """
 
 out = Path(__file__).parent
@@ -249,6 +319,6 @@ index = ["# Clothsomnia prompt packs", "",
          "One file per colourway. Paste a file into a Claude chat with Higgsfield on (not Claude Code, where the",
          "unlimited trial is blocked) and ask it to generate the images. Reference photos are already uploaded.", ""]
 index += [f"- [{c['title']}]({slug}.md)" for slug, c in COLOURS.items()]
-index += ["- [Packaging](packaging.md)"]
+index += ["- [Packaging](packaging.md)", "- [Exact hex colours](colours.md) (source of truth for every colour lock)"]
 (out / "README.md").write_text("\n".join(index) + "\n")
 print("wrote", len(COLOURS), "packs")

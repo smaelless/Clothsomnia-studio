@@ -12,3 +12,4 @@ unlimited trial is blocked) and ask it to generate the images. Reference photos 
 - [Olive Green](olive-green.md)
 - [Grey](grey.md)
 - [Packaging](packaging.md)
+- [Exact hex colours](colours.md) (source of truth for every colour lock)

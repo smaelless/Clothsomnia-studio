@@ -23,9 +23,11 @@ Pass all four as `image_references` on every generation:
 
 ## Product description (include in every prompt)
 
-Oversized solid muted olive / sage green sherpa fleece pullover hoodie, dropped shoulders, olive hood, wide soft sherpa cuffs and hem band in olive, same fine pile as the body, NOT ribbed knit, kangaroo pocket. These references are on-model photos: copy only the hoodie, not the person. Reproduce the colour layout, proportions and curly sherpa texture exactly as in the references. No people, no mannequin visible, no other brand logos, no hang tags, no text overlays.
+Oversized solid dark green-grey olive (#4F4E44, RGB 79,78,68; dark and muted, not sage, not bright green, not khaki) sherpa fleece pullover hoodie, dropped shoulders, olive hood, wide soft sherpa cuffs and hem band in olive, same fine pile as the body, NOT ribbed knit, kangaroo pocket. These references are on-model photos: copy only the hoodie, not the person. Reproduce the colour layout, proportions and curly sherpa texture exactly as in the references. The fleece is a FINE, TIGHT, SHORT curly pile (small dense curls like lamb's wool), not long fluffy teddy fur. No drawstrings, no hood cords, no prints or text on the outside of the garment. No people, no visible mannequin (studio shots use an invisible ghost-mannequin effect), no other brand logos, no hang tags, no text overlays.
 
-**Realism (include in every prompt):** REALISM = real product photography for an online store, not an illustration or 3D render. Shot on a full-frame camera, 50-85mm lens, natural or softbox light, true-to-life colour that matches the references. Fabric must behave like real heavy fleece: soft weight, natural wrinkles and folds where it bends, slight imperfections, visible individual curls, no plastic sheen, no airbrushed smoothness, no glow, no HDR, no over-sharpening. Keep the exact same colours in every image (do not drift under warm light). Simple believable scenes only, ordinary real-life props, no fantasy lighting. If a render looks AI-made, CGI or glossy, regenerate it.
+**Realism (include in every prompt):** REALISM = real product photography for an online store, not an illustration or 3D render. Shot on a full-frame camera, 50-85mm lens, natural or softbox light, true-to-life colour that matches the references. Fabric must behave like real heavy fleece: soft weight, natural wrinkles and folds where it bends, slight imperfections, visible individual curls, no plastic sheen, no airbrushed smoothness, no glow, no HDR, no over-sharpening. Keep the exact same colours in every image (see the colour lock), neutral daylight only, never warm or coloured light on the garment. Simple believable scenes only, ordinary real-life props, no fantasy lighting. If a render looks AI-made, CGI or glossy, regenerate it.
+
+**Colour lock (include in every prompt):** Dark green-grey olive #4F4E44 (RGB 79,78,68) everywhere. Dark and muted, not sage, not bright green. Measured from the real product photos. If a render is lighter, bluer, warmer, greener or more saturated than these values, regenerate it.
 
 ## Shots
 
@@ -35,16 +37,18 @@ Oversized solid muted olive / sage green sherpa fleece pullover hoodie, dropped 
 3. **Macro detail (4:5)**: Extreme close-up of the sherpa fleece and the neckline/label area, shallow depth of
    field, soft raking light that shows every curl of the fleece.
 4. **Lifestyle A (4:5)**: The hoodie tossed on a light-grey linen sofa with a chunky knit blanket and a book, soft afternoon window light, lazy Sunday mood. Lifestyle brand photography.
-5. **Lifestyle B (4:5)**: The hoodie hanging on a wooden peg in a cedar cabin in the Atlas mountains, misty forest through the window, soft natural light. Editorial fashion photography.
+5. **Lifestyle B (4:5)**: The hoodie hanging on a wooden peg on a plain wooden wall, soft natural window light, no props. Editorial fashion photography.
 6. **Folded flat lay (1:1)**: Neatly folded hoodie, top-down, on raw wood with a sprig of olive branch and a clay mug, soft even daylight, premium feel.
 
 ## Videos (after the images are approved)
 
 Model: `seedance_2_5`, `mode: "omni_reference"`, `resolution: "720p"` (the highest the free trial covers),
 `use_unlim: true`. Use the four reference photos as `image_references`. No people, no text.
-Video 7 uses the best studio image (shot 1) as `start_image`; video 8 uses the approved shot 4 image.
+Video 7 uses the best studio image (shot 1) as `start_image`; video 8 uses the approved shot 4 image; video 9 uses shot 1 again.
 
 7. **Hero turntable (1:1, 8s, no audio, start_image = shot 1)**: The hoodie on an invisible mannequin slowly rotates 360° on the
    warm stone-beige studio set; the sherpa fleece catches the soft light; smooth, loopable.
 8. **Lifestyle motion (3:4, 10s, soft ambient audio, start_image = shot 4)**: A slow cinematic dolly-in on the scene from shot 4,
    with gentle natural movement in the light and air, ending on a close-up of the fleece texture.
+9. **Reels cut (9:16, 8s, soft ambient audio, start_image = shot 1)**: Vertical clip for Meta Reels and Stories. A slow vertical push-in
+   on the hoodie on the warm stone-beige studio set, a gentle fabric ripple as if a breeze passes, ending on a close-up of the fleece curls.
